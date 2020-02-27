@@ -5,6 +5,8 @@
  */
 package edu.unicundi;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author daiyd
@@ -27,6 +29,7 @@ public class JPanelTriangulo extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        GrupoTipoTriangulo = new javax.swing.ButtonGroup();
         coordenada3YTriangulo = new javax.swing.JTextField();
         botonCalcularTriangulo = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
@@ -93,10 +96,13 @@ public class JPanelTriangulo extends javax.swing.JPanel {
 
         jLabel11.setText("¿Qué tipo de triángulo desea calcular?");
 
+        GrupoTipoTriangulo.add(botonIsosceles);
         botonIsosceles.setText("Isósceles");
 
+        GrupoTipoTriangulo.add(botonEquilatero);
         botonEquilatero.setText("Equilátero");
 
+        GrupoTipoTriangulo.add(botonEscaleno);
         botonEscaleno.setText("Escaleno");
         botonEscaleno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,9 +223,10 @@ public class JPanelTriangulo extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void botonCalcularTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularTrianguloActionPerformed
         // TODO add your handling code here:
+     
     }//GEN-LAST:event_botonCalcularTrianguloActionPerformed
 
     private void coordenada2XTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coordenada2XTrianguloActionPerformed
@@ -232,6 +239,7 @@ public class JPanelTriangulo extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup GrupoTipoTriangulo;
     private javax.swing.JRadioButton botonAreaTriangulo;
     private javax.swing.JButton botonCalcularTriangulo;
     private javax.swing.JRadioButton botonEquilatero;
