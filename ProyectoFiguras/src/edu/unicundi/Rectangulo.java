@@ -9,6 +9,21 @@ package edu.unicundi;
  *
  * @author daiyd
  */
-public class Rectangulo {
+public class Rectangulo extends Figura{
     
+    public Rectangulo(int ladoA, int ladoB ){
+        this.ladoA = ladoA;
+        this.ladoB = ladoB;
+    }
+    
+    @Override
+    public void area(){
+        area = ladoA * ladoB;
+    }
+    
+    @Override
+    public void perimetro(){
+        perimetro = ladoA * 2 + ladoB * 2;
+    }
+ 
 }

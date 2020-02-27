@@ -9,6 +9,20 @@ package edu.unicundi;
  *
  * @author daiyd
  */
-public class Cuadrado {
+public class Cuadrado extends Figura{
+
+    public Cuadrado(int ladoA) {
+        this.ladoA = ladoA;
+    }    
     
+    @Override
+    public void area(){
+        area = ladoA * ladoA;
+    }
+    
+    @Override
+    public void perimetro(){
+        perimetro = ladoA * 4;
+    }
+  
 }
