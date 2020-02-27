@@ -72,8 +72,8 @@
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="labelAreaRectangulo" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                                      <Component id="labelPerimetroRectangulo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelAreaTriangulo" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                                      <Component id="labelPerimetroTriangulo" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -143,12 +143,12 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel9" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="labelAreaRectangulo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelAreaTriangulo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="labelPerimetroRectangulo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelPerimetroTriangulo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -215,7 +215,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coordenada2XTrianguloActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="labelAreaRectangulo">
+    <Component class="javax.swing.JLabel" name="labelAreaTriangulo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Area"/>
       </Properties>
@@ -234,7 +234,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="coordenada3XTriangulo">
     </Component>
-    <Component class="javax.swing.JLabel" name="labelPerimetroRectangulo">
+    <Component class="javax.swing.JLabel" name="labelPerimetroTriangulo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Perimetro"/>
       </Properties>

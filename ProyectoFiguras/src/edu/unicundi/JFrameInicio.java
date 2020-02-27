@@ -5,6 +5,8 @@
  */
 package edu.unicundi;
 
+import java.awt.BorderLayout;
+
 /**
  *
  * @author daiyd
@@ -34,10 +36,16 @@ public class JFrameInicio extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        panelPrincipal = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         botonCuadrado.setText("Aceptar");
+        botonCuadrado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCuadradoMouseClicked(evt);
+            }
+        });
         botonCuadrado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonCuadradoActionPerformed(evt);
@@ -45,8 +53,18 @@ public class JFrameInicio extends javax.swing.JFrame {
         });
 
         botonRectangulo.setText("Aceptar");
+        botonRectangulo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonRectanguloMouseClicked(evt);
+            }
+        });
 
         botonTriangulo.setText("Aceptar");
+        botonTriangulo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonTrianguloMouseClicked(evt);
+            }
+        });
 
         jLabel1.setText("Bienvenido, escoja la figura a evaluar ");
 
@@ -56,40 +74,49 @@ public class JFrameInicio extends javax.swing.JFrame {
 
         jLabel4.setText("Triángulo");
 
+        javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
+        panelPrincipal.setLayout(panelPrincipalLayout);
+        panelPrincipalLayout.setHorizontalGroup(
+            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panelPrincipalLayout.setVerticalGroup(
+            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 396, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(159, 159, 159)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(135, 135, 135)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(botonCuadrado)
-                        .addGap(111, 111, 111)
-                        .addComponent(botonRectangulo)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(botonTriangulo)
-                        .addGap(63, 63, 63))
+                    .addComponent(jLabel2)
+                    .addComponent(botonCuadrado))
+                .addGap(232, 232, 232)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(botonRectangulo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 278, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botonTriangulo, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel4)
-                        .addGap(77, 77, 77))))
+                        .addGap(14, 14, 14)))
+                .addGap(48, 48, 48))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(265, 265, 265)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(37, 37, 37)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
@@ -99,7 +126,8 @@ public class JFrameInicio extends javax.swing.JFrame {
                     .addComponent(botonCuadrado)
                     .addComponent(botonRectangulo)
                     .addComponent(botonTriangulo))
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -108,6 +136,42 @@ public class JFrameInicio extends javax.swing.JFrame {
     private void botonCuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCuadradoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonCuadradoActionPerformed
+
+    private void botonCuadradoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCuadradoMouseClicked
+        // TODO add your handling code here:
+        JPanelCuadrado panelCuadrado = new JPanelCuadrado();
+        panelCuadrado.setSize(860,484);
+        panelCuadrado.setLocation(5, 5);
+        
+        panelPrincipal.removeAll();
+        panelPrincipal.add(panelCuadrado,BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }//GEN-LAST:event_botonCuadradoMouseClicked
+
+    private void botonRectanguloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonRectanguloMouseClicked
+        // TODO add your handling code here:
+        JPanelRectangulo panelRectangulo = new JPanelRectangulo();
+        panelRectangulo.setSize(860,484);
+        panelRectangulo.setLocation(5, 5);
+        
+        panelPrincipal.removeAll();
+        panelPrincipal.add(panelRectangulo,BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }//GEN-LAST:event_botonRectanguloMouseClicked
+
+    private void botonTrianguloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonTrianguloMouseClicked
+        // TODO add your handling code here:
+        JPanelTriangulo panelTriangulo = new JPanelTriangulo();
+        panelTriangulo.setSize(860,484);
+        panelTriangulo.setLocation(5, 5);
+        
+        panelPrincipal.removeAll();
+        panelPrincipal.add(panelTriangulo,BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }//GEN-LAST:event_botonTrianguloMouseClicked
 
     /**
      * @param args the command line arguments
@@ -152,5 +216,6 @@ public class JFrameInicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel panelPrincipal;
     // End of variables declaration//GEN-END:variables
 }

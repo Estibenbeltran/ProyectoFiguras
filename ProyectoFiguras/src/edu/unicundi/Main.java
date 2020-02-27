@@ -17,6 +17,14 @@ public class Main {
     public static void main(String[] args) {
         JFrameInicio frame = new JFrameInicio();
         frame.setVisible (true);
+        frame.setSize(900, 700);
+        JPanelCuadrado panelCuadrado = new JPanelCuadrado();
+        panelCuadrado.setVisible(true);
+        JPanelRectangulo panelRectangulo = new JPanelRectangulo();
+        panelRectangulo.setVisible(true);
+        JPanelTriangulo panelTriangulo = new JPanelTriangulo();
+        panelTriangulo.setVisible(true);
+               
     }
     
 }
