@@ -5,7 +5,7 @@ public class Triangulo extends Figura{
     
     double areaTrian, areaTrianRec, areaTrianEqui, perimetroTrian, perimetroTrianRec, perimetroTrianEqui;
     double coorX1,coorX2,coorX3,coorY1,coorY2,coorY3;
-    double longitud1, longitud2, longitud3;
+    double longitud1, longitud2, longitud3, perimetroTriangulo;
     
     public Triangulo(double coorX1, double coorX2, double coorX3, double coorY1, double coorY2, double coorY3) {
         this.coorX1 = coorX1;
@@ -21,11 +21,15 @@ public class Triangulo extends Figura{
 
     @Override
     public void area() {
-        longitud1 = Math.sqrt(Math.pow(coorX1, 2) + Math.pow(coorY1, 2));
-        longitud2 = Math.sqrt(Math.pow(coorX2, 2) + Math.pow(coorY2, 2));
-        longitud3 = Math.sqrt(Math.pow(coorX3, 2) + Math.pow(coorY3, 2));
+        longitud1 = Math.sqrt(Math.pow(coorX2 - coorX1, 2) + Math.pow(coorY2 - coorY1, 2));
+        longitud2 = Math.sqrt(Math.pow(coorX3 - coorX2, 2) + Math.pow(coorY3 - coorY2, 2));
+        longitud3 = Math.sqrt(Math.pow(coorX3 - coorX1, 2) + Math.pow(coorY3 - coorY1, 2));
         
-        areaTrian = Math.abs(coorX1 * (coorY2 - coorY3) + coorX2 * (coorY3 - coorY1) + coorX3 * (coorY1 - coorY2))   / 2;
+        
+        perimetroTrian = longitud1 + longitud2 + longitud3;
+        perimetroTriangulo = perimetroTrian/2; //perímetro 
+        areaTrian = Math.sqrt(perimetroTriangulo *(perimetroTriangulo - longitud1)*(perimetroTriangulo - longitud2)*(perimetroTriangulo - longitud3));
+        //areaTrian = Math.abs(coorX1 * (coorY2 - coorY3) + coorX2 * (coorY3 - coorY1) + coorX3 * (coorY1 - coorY2))   / 2;
         areaTrianEqui = Math.pow(ladoA, 2) * Math.sqrt(3) / 4;
         areaTrianRec = ladoA * ladoB / 2;
     }

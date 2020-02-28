@@ -164,8 +164,8 @@ public class JPanelTriangulo extends javax.swing.JPanel {
                                         .addComponent(jLabel9))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(labelAreaTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(labelPerimetroTriangulo))))
+                                        .addComponent(labelAreaTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelPerimetroTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel11)
@@ -178,7 +178,7 @@ public class JPanelTriangulo extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(91, 91, 91)
                         .addComponent(jLabel8)))
-                .addContainerGap(536, Short.MAX_VALUE))
+                .addContainerGap(521, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,7 +232,9 @@ public class JPanelTriangulo extends javax.swing.JPanel {
     
     private void botonCalcularTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularTrianguloActionPerformed
         // TODO add your handling code here:
+        double areaTriangulo, perimetroTriangulo;
         double coorX1 = Double.parseDouble(coordenada1XTriangulo.getText());
+        System.out.println(coorX1);
         double coorX2 = Double.parseDouble(coordenada2XTriangulo.getText());
         double coorX3 = Double.parseDouble(coordenada3XTriangulo.getText());
         double coorY1 = Double.parseDouble(coordenada1YTriangulo.getText());
@@ -242,9 +244,13 @@ public class JPanelTriangulo extends javax.swing.JPanel {
         Triangulo triangulo = new Triangulo(coorX1,coorX2,coorX3, coorY1, coorY2, coorY3);
         //System.out.println(triangulo);
         triangulo.area();
-        triangulo.getArea();
-        labelAreaTriangulo.setText(TOOL_TIP_TEXT_KEY);
-        System.out.println(triangulo.getArea());
+        areaTriangulo = triangulo.areaTrian;
+        perimetroTriangulo = triangulo.perimetroTrian; 
+        //triangulo.getArea();
+        
+        labelAreaTriangulo.setText(Double.toString(areaTriangulo));
+        labelPerimetroTriangulo.setText(Double.toString(perimetroTriangulo));
+        System.out.println(areaTriangulo);
         
     }//GEN-LAST:event_botonCalcularTrianguloActionPerformed
 
