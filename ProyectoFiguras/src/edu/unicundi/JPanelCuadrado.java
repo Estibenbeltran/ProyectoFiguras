@@ -191,10 +191,14 @@ public class JPanelCuadrado extends javax.swing.JPanel {
         double coorY2 = Double.parseDouble(coordenada2YCuadrado.getText());
         double coorY3 = Double.parseDouble(coordenada3YCuadrado.getText());
         double coorY4 = Double.parseDouble(coordenada4YCuadrado.getText());
-        
+        System.out.println(coorX1+""+coorX2+""+coorX3+""+coorX4);
         Cuadrado cuadrado = new Cuadrado(coorX1,coorX2,coorX3,coorX4, coorY1, coorY2, coorY3, coorY4);
+        cuadrado.coordenadaALados();
+        cuadrado.perimetro();
         cuadrado.area();
+        System.out.println(cuadrado.ladoA+"asdasd lado a");
         areaCuadrado = cuadrado.area;
+        //System.out.println("area   "+areaCuadrado);
         perimetroCuadrado = cuadrado.perimetro; 
         
         labelAreaCuadrado.setText(Double.toString(areaCuadrado));

@@ -191,7 +191,10 @@ public class JPanelRectangulo extends javax.swing.JPanel {
         double coorY4 = Double.parseDouble(coordenada4YRectangulo.getText());
         
         Rectangulo rectangulo = new Rectangulo(coorX1,coorX2,coorX3,coorX4, coorY1, coorY2, coorY3, coorY4);
+        rectangulo.coordenadaALados();
+        
         rectangulo.area();
+        rectangulo.perimetro();
         areaRectangulo = rectangulo.area;
         perimetroRectangulo = rectangulo.perimetro; 
         
