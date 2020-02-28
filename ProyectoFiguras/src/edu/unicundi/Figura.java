@@ -10,22 +10,22 @@ package edu.unicundi;
  * @author daiyd
  */
 public class Figura {
-    
+
     //declaracion de variables
     public double ladoA, ladoB, ladoC, altura, area, perimetro;
-    public double coorX1, coorX2, coorX3, coorY1, coorY2, coorY3; 
+    public double coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4;
     public String color;
-    
+
     //metodo para calcular area
     public void area() {
 
     }
-    
+
     //metodo para calcular perimetro
     public void perimetro() {
 
     }
-    
+
     //metodo para calcular lados con coordenadas
     public void coordenadaALados() {
 
@@ -34,8 +34,7 @@ public class Figura {
     public void color() {
 
     }
-    
-    
+
     public double getLadoA() {
         return ladoA;
     }
