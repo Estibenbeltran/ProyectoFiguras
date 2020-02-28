@@ -182,6 +182,26 @@ public class JPanelCuadrado extends javax.swing.JPanel {
 
     private void botonCalcularCuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularCuadradoActionPerformed
         // TODO add your handling code here:
+        double areaCuadrado, perimetroCuadrado;
+        double coorX1 = Double.parseDouble(coordenada1XCuadrado.getText());
+        double coorX2 = Double.parseDouble(coordenada2XCuadrado.getText());
+        double coorX3 = Double.parseDouble(coordenada3XCuadrado.getText());
+        double coorX4 = Double.parseDouble(coordenada4XCuadrado.getText());
+        double coorY1 = Double.parseDouble(coordenada1YCuadrado.getText());
+        double coorY2 = Double.parseDouble(coordenada2YCuadrado.getText());
+        double coorY3 = Double.parseDouble(coordenada3YCuadrado.getText());
+        double coorY4 = Double.parseDouble(coordenada4YCuadrado.getText());
+        
+        Cuadrado cuadrado = new Cuadrado(coorX1,coorX2,coorX3,coorX4, coorY1, coorY2, coorY3, coorY4);
+        //System.out.println(triangulo);
+        cuadrado.area();
+        areaCuadrado = cuadrado.area;
+        perimetroCuadrado = cuadrado.perimetro; 
+        //triangulo.getArperimetroTrianguloea();
+        
+        labelAreaCuadrado.setText(Double.toString(areaCuadrado));
+        labelPerimetroCuadrado.setText(Double.toString(perimetroCuadrado));
+        
     }//GEN-LAST:event_botonCalcularCuadradoActionPerformed
 
 
