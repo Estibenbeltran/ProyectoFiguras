@@ -20,16 +20,19 @@ public class Cuadrado extends Figura {
         this.coorY3 = coorY3;
     }
 
+    //metodo heredado de la clase figura
     @Override
     public void coordenadaALados() {
         ladoA = Math.sqrt(Math.pow((coorX2 - coorX1), 2) + Math.pow((coorY2 - coorY1), 2));
     }
 
+    //metodo heredado de la clase figura
     @Override
     public void area() {
         area = ladoA * ladoA;
     }
 
+    //metodo heredado de la clase figura
     @Override
     public void perimetro() {
         perimetro = ladoA * 4;
