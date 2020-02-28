@@ -179,6 +179,24 @@ public class JPanelRectangulo extends javax.swing.JPanel {
 
     private void botonCalcularRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularRectanguloActionPerformed
         // TODO add your handling code here:
+        
+        double areaRectangulo, perimetroRectangulo;
+        double coorX1 = Double.parseDouble(coordenada1XRectangulo.getText());
+        double coorX2 = Double.parseDouble(coordenada2XRectangulo.getText());
+        double coorX3 = Double.parseDouble(coordenada3XRectangulo.getText());
+        double coorX4 = Double.parseDouble(coordenada4XRectangulo.getText());
+        double coorY1 = Double.parseDouble(coordenada1YRectangulo.getText());
+        double coorY2 = Double.parseDouble(coordenada2YRectangulo.getText());
+        double coorY3 = Double.parseDouble(coordenada3YRectangulo.getText());
+        double coorY4 = Double.parseDouble(coordenada4YRectangulo.getText());
+        
+        Rectangulo rectangulo = new Rectangulo(coorX1,coorX2,coorX3,coorX4, coorY1, coorY2, coorY3, coorY4);
+        rectangulo.area();
+        areaRectangulo = rectangulo.area;
+        perimetroRectangulo = rectangulo.perimetro; 
+        
+        labelAreaRectangulo.setText(Double.toString(areaRectangulo));
+        labelPerimetroRectangulo.setText(Double.toString(perimetroRectangulo));
     }//GEN-LAST:event_botonCalcularRectanguloActionPerformed
 
     private void coordenada2XRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coordenada2XRectanguloActionPerformed
