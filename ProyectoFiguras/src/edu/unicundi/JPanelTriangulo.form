@@ -208,6 +208,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="coordenada1XTriangulo">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coordenada1XTrianguloActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>

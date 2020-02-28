@@ -12,17 +12,20 @@ package edu.unicundi;
 public class Triangulo extends Figura{
     
     double areaTrian, areaTrianRec, areaTrianEqui, perimetroTrian, perimetroTrianRec, perimetroTrianEqui;
+    double coorX1,coorX2,coorX3,coorY1,coorY2,coorY3;
     
-    public Triangulo(int ladoA, int ladoB, int ladoC, int altura) {
-        this.ladoA = ladoA;
-        this.ladoB = ladoB;
-        this.ladoC = ladoC;
-        this.altura = altura;
+    public Triangulo(double coorX1, double coorX2, double coorX3, double coorY1, double coorY2, double coorY3) {
+        this.coorX1 = coorX1;
+        this.coorX2 = coorX2;
+        this.coorX3 = coorX3;
+        this.coorY1 = coorY1;
+        this.coorY2 = coorY2;
+        this.coorY3 = coorY3;
     }
 
     @Override
     public void area() {
-        areaTrian = ladoA * altura / 2;
+        areaTrian = Math.abs(coorX1 * (coorY2 - coorY3) + coorX2 * (coorY3 - coorY1) + coorX3 * (coorY1 - coorY2))   / 2;
         areaTrianEqui = Math.pow(ladoA, 2) * Math.sqrt(3) / 4;
         areaTrianRec = ladoA * ladoB / 2;
     }

@@ -76,6 +76,12 @@ public class JPanelTriangulo extends javax.swing.JPanel {
 
         jLabel10.setText("El perímetro del triángulo es:");
 
+        coordenada1XTriangulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coordenada1XTrianguloActionPerformed(evt);
+            }
+        });
+
         jLabel5.setText("C2");
 
         coordenada2XTriangulo.addActionListener(new java.awt.event.ActionListener() {
@@ -226,7 +232,16 @@ public class JPanelTriangulo extends javax.swing.JPanel {
     
     private void botonCalcularTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularTrianguloActionPerformed
         // TODO add your handling code here:
-     
+        double coorX1 = Double.parseDouble(coordenada1XTriangulo.getText());
+        double coorX2 = Double.parseDouble(coordenada2XTriangulo.getText());
+        double coorX3 = Double.parseDouble(coordenada3XTriangulo.getText());
+        double coorY1 = Double.parseDouble(coordenada1YTriangulo.getText());
+        double coorY2 = Double.parseDouble(coordenada2YTriangulo.getText());
+        double coorY3 = Double.parseDouble(coordenada3YTriangulo.getText());
+        
+        Triangulo triangulo = new Triangulo(coorX1,coorX2,coorX3, coorY1, coorY2, coorY3);
+        triangulo.area();
+        triangulo.getArea();
     }//GEN-LAST:event_botonCalcularTrianguloActionPerformed
 
     private void coordenada2XTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coordenada2XTrianguloActionPerformed
@@ -236,6 +251,10 @@ public class JPanelTriangulo extends javax.swing.JPanel {
     private void botonEscalenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEscalenoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonEscalenoActionPerformed
+
+    private void coordenada1XTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coordenada1XTrianguloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_coordenada1XTrianguloActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
