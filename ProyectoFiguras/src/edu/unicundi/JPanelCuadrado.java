@@ -42,9 +42,6 @@ public class JPanelCuadrado extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        botonAreaCuadrado = new javax.swing.JRadioButton();
-        botonPerimetroCuadrado = new javax.swing.JRadioButton();
         botonCalcularCuadrado = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -70,12 +67,6 @@ public class JPanelCuadrado extends javax.swing.JPanel {
         jLabel6.setText("C3");
 
         jLabel7.setText("C4");
-
-        jLabel8.setText("¿Qué desea calcular del cuadrado?");
-
-        botonAreaCuadrado.setText("Area");
-
-        botonPerimetroCuadrado.setText("Perímetro");
 
         botonCalcularCuadrado.setText("Calcular");
         botonCalcularCuadrado.addActionListener(new java.awt.event.ActionListener() {
@@ -140,30 +131,16 @@ public class JPanelCuadrado extends javax.swing.JPanel {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(labelAreaCuadrado, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(labelPerimetroCuadrado))))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(106, 106, 106)
-                            .addComponent(jLabel8))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(82, 82, 82)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(botonPerimetroCuadrado)
-                                .addComponent(botonAreaCuadrado)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(110, 110, 110)
-                            .addComponent(jLabel1))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(jLabel1)
+                        .addGap(55, 55, 55)))
                 .addContainerGap(555, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(botonAreaCuadrado)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(botonPerimetroCuadrado)
-                .addGap(18, 18, 18)
+                .addGap(62, 62, 62)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -195,7 +172,7 @@ public class JPanelCuadrado extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(labelPerimetroCuadrado))
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -209,9 +186,7 @@ public class JPanelCuadrado extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton botonAreaCuadrado;
     private javax.swing.JButton botonCalcularCuadrado;
-    private javax.swing.JRadioButton botonPerimetroCuadrado;
     private javax.swing.JTextField coordenada1XCuadrado;
     private javax.swing.JTextField coordenada1YCuadrado;
     private javax.swing.JTextField coordenada2XCuadrado;
@@ -228,7 +203,6 @@ public class JPanelCuadrado extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel labelAreaCuadrado;
     private javax.swing.JLabel labelPerimetroCuadrado;
