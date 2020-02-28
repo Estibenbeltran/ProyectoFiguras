@@ -4,7 +4,6 @@ package edu.unicundi;
 public class Triangulo extends Figura{
     
     double areaTrian, areaTrianRec, areaTrianEqui, perimetroTrian, perimetroTrianRec, perimetroTrianEqui;
-    double coorX1,coorX2,coorX3,coorY1,coorY2,coorY3;
     double longitud1, longitud2, longitud3, perimetroTriangulo;
     
     public Triangulo(double coorX1, double coorX2, double coorX3, double coorY1, double coorY2, double coorY3) {

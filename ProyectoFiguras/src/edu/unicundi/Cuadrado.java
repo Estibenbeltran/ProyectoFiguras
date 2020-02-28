@@ -9,20 +9,30 @@ package edu.unicundi;
  *
  * @author daiyd
  */
-public class Cuadrado extends Figura{
+public class Cuadrado extends Figura {
 
-    public Cuadrado(int ladoA) {
-        this.ladoA = ladoA;
-    }    
-    
+    public Cuadrado(double coorX1, double coorX2, double coorX3, double coorY1, double coorY2, double coorY3) {
+        this.coorX1 = coorX1;
+        this.coorX2 = coorX2;
+        this.coorX3 = coorX3;
+        this.coorY1 = coorY1;
+        this.coorY2 = coorY2;
+        this.coorY3 = coorY3;
+    }
+
     @Override
-    public void area(){
+    public void coordenadaALados() {
+        ladoA = Math.sqrt(Math.pow((coorX2 - coorX1), 2) + Math.pow((coorY2 - coorY1), 2));
+    }
+
+    @Override
+    public void area() {
         area = ladoA * ladoA;
     }
-    
+
     @Override
-    public void perimetro(){
+    public void perimetro() {
         perimetro = ladoA * 4;
     }
-  
+
 }

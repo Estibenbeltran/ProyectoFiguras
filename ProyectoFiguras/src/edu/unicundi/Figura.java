@@ -11,22 +11,27 @@ package edu.unicundi;
  */
 public class Figura {
     
-    public int ladoA, ladoB, ladoC, altura, area, perimetro;
+    public double ladoA, ladoB, ladoC, altura, area, perimetro;
+    public double coorX1, coorX2, coorX3, coorY1, coorY2, coorY3;
     public String color;
-    
-    public void area(){
-        
+
+    public void area() {
+
     }
-    
-    public void perimetro(){
-        
+
+    public void perimetro() {
+
     }
-    
-    public void color(){
-        
+
+    public void coordenadaALados() {
+
     }
-    
-    public int getLadoA() {
+
+    public void color() {
+
+    }
+
+    public double getLadoA() {
         return ladoA;
     }
 
@@ -34,7 +39,7 @@ public class Figura {
         this.ladoA = ladoA;
     }
 
-    public int getLadoB() {
+    public double getLadoB() {
         return ladoB;
     }
 
@@ -42,7 +47,7 @@ public class Figura {
         this.ladoB = ladoB;
     }
 
-    public int getLadoC() {
+    public double getLadoC() {
         return ladoC;
     }
 
@@ -50,7 +55,7 @@ public class Figura {
         this.ladoC = ladoC;
     }
 
-    public int getAltura() {
+    public double getAltura() {
         return altura;
     }
 
@@ -58,7 +63,7 @@ public class Figura {
         this.altura = altura;
     }
 
-    public int getArea() {
+    public double getArea() {
         return area;
     }
 
@@ -66,7 +71,7 @@ public class Figura {
         this.area = area;
     }
 
-    public int getPerimetro() {
+    public double getPerimetro() {
         return perimetro;
     }
 
@@ -81,5 +86,5 @@ public class Figura {
     public void setColor(String color) {
         this.color = color;
     }
-    
+
 }
