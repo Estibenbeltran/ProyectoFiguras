@@ -179,7 +179,7 @@ public class JPanelRectangulo extends javax.swing.JPanel {
 
     private void botonCalcularRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularRectanguloActionPerformed
         // TODO add your handling code here:
-        
+        //coordenadas para poder calcular el área del rectángulo
         double areaRectangulo, perimetroRectangulo;
         double coorX1 = Double.parseDouble(coordenada1XRectangulo.getText());
         double coorX2 = Double.parseDouble(coordenada2XRectangulo.getText());
@@ -190,9 +190,10 @@ public class JPanelRectangulo extends javax.swing.JPanel {
         double coorY3 = Double.parseDouble(coordenada3YRectangulo.getText());
         double coorY4 = Double.parseDouble(coordenada4YRectangulo.getText());
         
+        //se envían las coordenadas al constructor
         Rectangulo rectangulo = new Rectangulo(coorX1,coorX2,coorX3,coorX4, coorY1, coorY2, coorY3, coorY4);
         rectangulo.coordenadaALados();
-        
+        //se llaman las funciones para poder calcular el área y el perímetro del rectángulo
         rectangulo.area();
         rectangulo.perimetro();
         areaRectangulo = rectangulo.area;

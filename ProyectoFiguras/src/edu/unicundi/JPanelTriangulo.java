@@ -186,25 +186,25 @@ public class JPanelTriangulo extends javax.swing.JPanel {
     
     private void botonCalcularTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularTrianguloActionPerformed
         // TODO add your handling code here:
+        //coordenadas para poder hallar el área y el perímetro del triángulo
         double areaTriangulo, perimetroTriangulo;
         double coorX1 = Double.parseDouble(coordenada1XTriangulo.getText());
-        System.out.println(coorX1);
         double coorX2 = Double.parseDouble(coordenada2XTriangulo.getText());
         double coorX3 = Double.parseDouble(coordenada3XTriangulo.getText());
         double coorY1 = Double.parseDouble(coordenada1YTriangulo.getText());
         double coorY2 = Double.parseDouble(coordenada2YTriangulo.getText());
         double coorY3 = Double.parseDouble(coordenada3YTriangulo.getText());
-        
+        //se envían al constructor las coordenadas para poder hallar el +área y el perímetro del triángulo
         Triangulo triangulo = new Triangulo(coorX1,coorX2,coorX3, coorY1, coorY2, coorY3);
         //System.out.println(triangulo);
         triangulo.area();
         areaTriangulo = triangulo.areaTrian;
         perimetroTriangulo = triangulo.perimetroTrian; 
-        //triangulo.getArea();
         
+        //se muestran los resultados
         labelAreaTriangulo.setText(Double.toString(areaTriangulo));
         labelPerimetroTriangulo.setText(Double.toString(perimetroTriangulo));
-        System.out.println(areaTriangulo);
+       
         
     }//GEN-LAST:event_botonCalcularTrianguloActionPerformed
 

@@ -182,6 +182,7 @@ public class JPanelCuadrado extends javax.swing.JPanel {
 
     private void botonCalcularCuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularCuadradoActionPerformed
         // TODO add your handling code here:
+        //coordenadas para poder calcular el cuadrado
         double areaCuadrado, perimetroCuadrado;
         double coorX1 = Double.parseDouble(coordenada1XCuadrado.getText());
         double coorX2 = Double.parseDouble(coordenada2XCuadrado.getText());
@@ -191,16 +192,19 @@ public class JPanelCuadrado extends javax.swing.JPanel {
         double coorY2 = Double.parseDouble(coordenada2YCuadrado.getText());
         double coorY3 = Double.parseDouble(coordenada3YCuadrado.getText());
         double coorY4 = Double.parseDouble(coordenada4YCuadrado.getText());
-        System.out.println(coorX1+""+coorX2+""+coorX3+""+coorX4);
+        //System.out.println(coorX1+""+coorX2+""+coorX3+""+coorX4);
+        
+        //se envían las coordenadas al constructor de la clase Cuadrado
         Cuadrado cuadrado = new Cuadrado(coorX1,coorX2,coorX3,coorX4, coorY1, coorY2, coorY3, coorY4);
+        //se llaman las funciones para poder calcular el área y el perímetro
         cuadrado.coordenadaALados();
         cuadrado.perimetro();
         cuadrado.area();
-        System.out.println(cuadrado.ladoA+"asdasd lado a");
+        //System.out.println(cuadrado.ladoA+"asdasd lado a");
         areaCuadrado = cuadrado.area;
         //System.out.println("area   "+areaCuadrado);
         perimetroCuadrado = cuadrado.perimetro; 
-        
+        //se añaden al Label para mostrar en pantalla el área y el perímetro
         labelAreaCuadrado.setText(Double.toString(areaCuadrado));
         labelPerimetroCuadrado.setText(Double.toString(perimetroCuadrado));
         
