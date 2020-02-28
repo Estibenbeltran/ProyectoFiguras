@@ -240,8 +240,12 @@ public class JPanelTriangulo extends javax.swing.JPanel {
         double coorY3 = Double.parseDouble(coordenada3YTriangulo.getText());
         
         Triangulo triangulo = new Triangulo(coorX1,coorX2,coorX3, coorY1, coorY2, coorY3);
+        //System.out.println(triangulo);
         triangulo.area();
         triangulo.getArea();
+        labelAreaTriangulo.setText(TOOL_TIP_TEXT_KEY);
+        System.out.println(triangulo.getArea());
+        
     }//GEN-LAST:event_botonCalcularTrianguloActionPerformed
 
     private void coordenada2XTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coordenada2XTrianguloActionPerformed
