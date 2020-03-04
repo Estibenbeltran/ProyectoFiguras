@@ -47,7 +47,11 @@ public class JPanelRectangulo extends javax.swing.JPanel {
         coordenada1XRectangulo = new javax.swing.JTextField();
         coordenada2XRectangulo = new javax.swing.JTextField();
         coordenada2YRectangulo = new javax.swing.JTextField();
+<<<<<<< Updated upstream
         jPanelGraficaRectangulo = new javax.swing.JPanel();
+=======
+        labelValidacionRectangulo = new javax.swing.JLabel();
+>>>>>>> Stashed changes
 
         botonCalcularRectangulo.setText("Calcular");
         botonCalcularRectangulo.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +88,7 @@ public class JPanelRectangulo extends javax.swing.JPanel {
             }
         });
 
+<<<<<<< Updated upstream
         jPanelGraficaRectangulo.setPreferredSize(new java.awt.Dimension(400, 400));
 
         javax.swing.GroupLayout jPanelGraficaRectanguloLayout = new javax.swing.GroupLayout(jPanelGraficaRectangulo);
@@ -96,62 +101,76 @@ public class JPanelRectangulo extends javax.swing.JPanel {
             jPanelGraficaRectanguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
+=======
+        labelValidacionRectangulo.setText("validacion");
+>>>>>>> Stashed changes
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addGap(18, 18, 18)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(coordenada1XRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel4))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(coordenada2XRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(coordenada3XRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(coordenada4XRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel6)
-                                    .addGap(31, 31, 31)
-                                    .addComponent(jLabel7))))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(botonCalcularRectangulo)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel3)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(coordenada1YRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(coordenada2YRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(coordenada3YRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(coordenada4YRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel10)
-                                .addComponent(jLabel9))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(labelAreaRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(labelPerimetroRectangulo))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel2)
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(coordenada1XRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel4))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(coordenada2XRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel5))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(coordenada3XRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(coordenada4XRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jLabel6)
+                                            .addGap(31, 31, 31)
+                                            .addComponent(jLabel7))))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(botonCalcularRectangulo)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jLabel3)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(coordenada1YRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(coordenada2YRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(coordenada3YRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(coordenada4YRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel10)
+                                        .addComponent(jLabel9))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(labelAreaRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(labelPerimetroRectangulo))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(62, 62, 62))))
+                    .addGroup(layout.createSequentialGroup()
+<<<<<<< Updated upstream
                         .addComponent(jLabel1)
                         .addGap(62, 62, 62)))
                 .addGap(26, 26, 26)
                 .addComponent(jPanelGraficaRectangulo, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
                 .addContainerGap())
+=======
+                        .addGap(135, 135, 135)
+                        .addComponent(labelValidacionRectangulo)))
+                .addContainerGap(547, Short.MAX_VALUE))
+>>>>>>> Stashed changes
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,11 +207,17 @@ public class JPanelRectangulo extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(labelPerimetroRectangulo))
+<<<<<<< Updated upstream
                 .addContainerGap(148, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanelGraficaRectangulo, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
                 .addContainerGap())
+=======
+                .addGap(18, 18, 18)
+                .addComponent(labelValidacionRectangulo)
+                .addContainerGap(115, Short.MAX_VALUE))
+>>>>>>> Stashed changes
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -208,19 +233,24 @@ public class JPanelRectangulo extends javax.swing.JPanel {
         int coorY2 = Integer.parseInt(coordenada2YRectangulo.getText());
         int coorY3 = Integer.parseInt(coordenada3YRectangulo.getText());
         int coorY4 = Integer.parseInt(coordenada4YRectangulo.getText());
-        
+
         //se envían las coordenadas al constructor
-        Rectangulo rectangulo = new Rectangulo(coorX1,coorX2,coorX3,coorX4, coorY1, coorY2, coorY3, coorY4);
+        Rectangulo rectangulo = new Rectangulo(coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
         rectangulo.dibujarFigura(jPanelGraficaRectangulo.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
         rectangulo.coordenadaALados();
         //se llaman las funciones para poder calcular el área y el perímetro del rectángulo
         rectangulo.area();
         rectangulo.perimetro();
-        areaRectangulo = rectangulo.area;
-        perimetroRectangulo = rectangulo.perimetro; 
-        
-        labelAreaRectangulo.setText(Double.toString(areaRectangulo));
-        labelPerimetroRectangulo.setText(Double.toString(perimetroRectangulo));
+        if (rectangulo.ladoA == rectangulo.ladoC && rectangulo.ladoB == rectangulo.ladoD) {
+            areaRectangulo = rectangulo.area;
+            perimetroRectangulo = rectangulo.perimetro;
+
+            labelAreaRectangulo.setText(Double.toString(areaRectangulo));
+            labelPerimetroRectangulo.setText(Double.toString(perimetroRectangulo));
+        } else {
+            labelValidacionRectangulo.setText("las coordenadas ingresadas no son un cuadrado");
+        }
+
     }//GEN-LAST:event_botonCalcularRectanguloActionPerformed
 
     private void coordenada2XRectanguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coordenada2XRectanguloActionPerformed
@@ -250,5 +280,6 @@ public class JPanelRectangulo extends javax.swing.JPanel {
     private javax.swing.JPanel jPanelGraficaRectangulo;
     private javax.swing.JLabel labelAreaRectangulo;
     private javax.swing.JLabel labelPerimetroRectangulo;
+    private javax.swing.JLabel labelValidacionRectangulo;
     // End of variables declaration//GEN-END:variables
 }

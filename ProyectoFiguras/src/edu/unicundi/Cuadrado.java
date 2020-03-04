@@ -25,17 +25,18 @@ public class Cuadrado extends Figura {
         this.coorY3 = coorY3;
         this.coorY4 = coorY4;
     }
-    
-    
-    public void dibujarFigura(Graphics graficador, int coorX1, int coorX2, int coorX3, int coorX4, int coorY1, int coorY2, int coorY3, int coorY4){
+
+    public void dibujarFigura(Graphics graficador, int coorX1, int coorX2, int coorX3, int coorX4, int coorY1, int coorY2, int coorY3, int coorY4) {
         int[] xCoordenadas = {coorX1 * 50 + 10, coorX2 * 50 + 10, coorX3 * 50 + 10, coorX4 * 50 + 10};
         int[] yCoordenadas = {510 - coorY1 * 50, 510 - coorY2 * 50, 510 - coorY3 * 50, 510 - coorY4 * 50};
         graficador.fillPolygon(xCoordenadas, yCoordenadas, 4);
     }
+
     //metodo heredado de la clase figura
     @Override
     public void coordenadaALados() {
-        ladoA = Math.sqrt(Math.pow((coorX2 - coorX1), 2) + Math.pow((coorY2 - coorY1), 2));
+        ladoA = Math.sqrt(Math.pow((coorX2 - coorX1), 2) + Math.pow((coorY2 - coorY1), 2));//calculo de ladoA
+        ladoB = Math.sqrt(Math.pow((coorX3 - coorX2), 2) + Math.pow((coorY3 - coorY2), 2));//calculo de ladoB
     }
 
     //metodo heredado de la clase figura
@@ -49,6 +50,5 @@ public class Cuadrado extends Figura {
     public void perimetro() {
         perimetro = ladoA * 4;
     }
-
 
 }

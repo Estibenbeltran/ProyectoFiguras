@@ -202,6 +202,7 @@ public class JPanelTriangulo extends javax.swing.JPanel {
         // TODO add your handling code here:
         //coordenadas para poder hallar el área y el perímetro del triángulo
         double areaTriangulo, perimetroTriangulo;
+        String difTriangulo;
         int coorX1 = Integer.parseInt(coordenada1XTriangulo.getText());
         int coorX2 = Integer.parseInt(coordenada2XTriangulo.getText());
         int coorX3 = Integer.parseInt(coordenada3XTriangulo.getText());
@@ -213,15 +214,17 @@ public class JPanelTriangulo extends javax.swing.JPanel {
         Triangulo triangulo = new Triangulo(coorX1,coorX2,coorX3, coorY1, coorY2, coorY3);
         triangulo.dibujarFigura(jPanelGraficaTriangulo.getGraphics(), coorX1, coorX2, coorX3, coorY1, coorY2, coorY3);
         //System.out.println(triangulo);
+        triangulo.perimetro();
         triangulo.area();
-        areaTriangulo = triangulo.areaTrian;
-        perimetroTriangulo = triangulo.perimetroTrian; 
+        triangulo.difTriangulos();
+        areaTriangulo = triangulo.area;
+        perimetroTriangulo = triangulo.perimetro;    
+        difTriangulo = triangulo.difTriangulo;
         
         //se muestran los resultados
         labelAreaTriangulo.setText(Double.toString(areaTriangulo));
         labelPerimetroTriangulo.setText(Double.toString(perimetroTriangulo));
-       
-        
+        labelTipoTriangulo.setText(difTriangulo);
     }//GEN-LAST:event_botonCalcularTrianguloActionPerformed
 
     private void coordenada2XTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coordenada2XTrianguloActionPerformed

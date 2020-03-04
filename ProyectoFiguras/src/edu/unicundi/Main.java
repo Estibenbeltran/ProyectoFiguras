@@ -27,7 +27,6 @@ public class Main {
         panelRectangulo.setVisible(true);
         JPanelTriangulo panelTriangulo = new JPanelTriangulo();
         panelTriangulo.setVisible(true);
-               
     }
     
 }

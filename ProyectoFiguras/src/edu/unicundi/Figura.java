@@ -14,15 +14,15 @@ import java.awt.Graphics;
 public class Figura {
 
     //declaracion de variables
-    public double ladoA, ladoB, ladoC, altura, area, perimetro;
+    public double ladoA, ladoB, ladoC, ladoD, altura, area, perimetro;
     public double coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4;
     public String color;
     double coordenada1, coordenada2, coordenada3, coordenada4;
 
-    
     public void dibujarFigura() {
 
     }
+
     //metodo para calcular area
     public void area() {
 
@@ -64,6 +64,14 @@ public class Figura {
 
     public void setLadoC(int ladoC) {
         this.ladoC = ladoC;
+    }
+
+    public double getLadoD() {
+        return ladoD;
+    }
+
+    public void setLadoD(double ladoD) {
+        this.ladoD = ladoD;
     }
 
     public double getAltura() {
