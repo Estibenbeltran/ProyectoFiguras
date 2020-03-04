@@ -13,7 +13,7 @@ import java.awt.Graphics;
  */
 public class JPanelCuadrado extends javax.swing.JPanel {
     
-    private JPanel jPanel = new JPanel();
+   
     /**
      * Creates new form JPanelCuadrado
      */

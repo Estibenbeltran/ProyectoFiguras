@@ -47,6 +47,7 @@ public class JPanelRectangulo extends javax.swing.JPanel {
         coordenada1XRectangulo = new javax.swing.JTextField();
         coordenada2XRectangulo = new javax.swing.JTextField();
         coordenada2YRectangulo = new javax.swing.JTextField();
+        jPanelGraficaRectangulo = new javax.swing.JPanel();
 
         botonCalcularRectangulo.setText("Calcular");
         botonCalcularRectangulo.addActionListener(new java.awt.event.ActionListener() {
@@ -82,6 +83,19 @@ public class JPanelRectangulo extends javax.swing.JPanel {
                 coordenada2XRectanguloActionPerformed(evt);
             }
         });
+
+        jPanelGraficaRectangulo.setPreferredSize(new java.awt.Dimension(400, 400));
+
+        javax.swing.GroupLayout jPanelGraficaRectanguloLayout = new javax.swing.GroupLayout(jPanelGraficaRectangulo);
+        jPanelGraficaRectangulo.setLayout(jPanelGraficaRectanguloLayout);
+        jPanelGraficaRectanguloLayout.setHorizontalGroup(
+            jPanelGraficaRectanguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 509, Short.MAX_VALUE)
+        );
+        jPanelGraficaRectanguloLayout.setVerticalGroup(
+            jPanelGraficaRectanguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -133,10 +147,11 @@ public class JPanelRectangulo extends javax.swing.JPanel {
                                 .addComponent(labelAreaRectangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(labelPerimetroRectangulo))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
                         .addComponent(jLabel1)
                         .addGap(62, 62, 62)))
-                .addContainerGap(547, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jPanelGraficaRectangulo, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,6 +189,10 @@ public class JPanelRectangulo extends javax.swing.JPanel {
                     .addComponent(jLabel10)
                     .addComponent(labelPerimetroRectangulo))
                 .addContainerGap(148, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelGraficaRectangulo, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -181,17 +200,18 @@ public class JPanelRectangulo extends javax.swing.JPanel {
         // TODO add your handling code here:
         //coordenadas para poder calcular el área del rectángulo
         double areaRectangulo, perimetroRectangulo;
-        double coorX1 = Double.parseDouble(coordenada1XRectangulo.getText());
-        double coorX2 = Double.parseDouble(coordenada2XRectangulo.getText());
-        double coorX3 = Double.parseDouble(coordenada3XRectangulo.getText());
-        double coorX4 = Double.parseDouble(coordenada4XRectangulo.getText());
-        double coorY1 = Double.parseDouble(coordenada1YRectangulo.getText());
-        double coorY2 = Double.parseDouble(coordenada2YRectangulo.getText());
-        double coorY3 = Double.parseDouble(coordenada3YRectangulo.getText());
-        double coorY4 = Double.parseDouble(coordenada4YRectangulo.getText());
+        int coorX1 = Integer.parseInt(coordenada1XRectangulo.getText());
+        int coorX2 = Integer.parseInt(coordenada2XRectangulo.getText());
+        int coorX3 = Integer.parseInt(coordenada3XRectangulo.getText());
+        int coorX4 = Integer.parseInt(coordenada4XRectangulo.getText());
+        int coorY1 = Integer.parseInt(coordenada1YRectangulo.getText());
+        int coorY2 = Integer.parseInt(coordenada2YRectangulo.getText());
+        int coorY3 = Integer.parseInt(coordenada3YRectangulo.getText());
+        int coorY4 = Integer.parseInt(coordenada4YRectangulo.getText());
         
         //se envían las coordenadas al constructor
         Rectangulo rectangulo = new Rectangulo(coorX1,coorX2,coorX3,coorX4, coorY1, coorY2, coorY3, coorY4);
+        rectangulo.dibujarFigura(jPanelGraficaRectangulo.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
         rectangulo.coordenadaALados();
         //se llaman las funciones para poder calcular el área y el perímetro del rectángulo
         rectangulo.area();
@@ -227,6 +247,7 @@ public class JPanelRectangulo extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanelGraficaRectangulo;
     private javax.swing.JLabel labelAreaRectangulo;
     private javax.swing.JLabel labelPerimetroRectangulo;
     // End of variables declaration//GEN-END:variables

@@ -5,6 +5,8 @@
  */
 package edu.unicundi;
 
+import java.awt.Graphics;
+
 /**
  *
  * @author daiyd
@@ -21,6 +23,12 @@ public class Rectangulo extends Figura {
         this.coorY2 = coorY2;
         this.coorY3 = coorY3;
         this.coorY4 = coorY4;
+    }
+    
+    public void dibujarFigura(Graphics graficador, int coorX1, int coorX2, int coorX3, int coorX4, int coorY1, int coorY2, int coorY3, int coorY4){
+        int[] xCoordenadas = {coorX1 * 50 + 10, coorX2 * 50 + 10, coorX3 * 50 + 10, coorX4 * 50 + 10};
+        int[] yCoordenadas = {510 - coorY1 * 50, 510 - coorY2 * 50, 510 - coorY3 * 50, 510 - coorY4 * 50};
+        graficador.fillPolygon(xCoordenadas, yCoordenadas, 4);
     }
 
     //metodo heredado de la clase figura
