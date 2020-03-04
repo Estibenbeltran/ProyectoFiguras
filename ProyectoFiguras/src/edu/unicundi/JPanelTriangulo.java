@@ -49,6 +49,7 @@ public class JPanelTriangulo extends javax.swing.JPanel {
         labelPerimetroTriangulo = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         labelTipoTriangulo = new javax.swing.JLabel();
+        jPanelGraficaTriangulo = new javax.swing.JPanel();
 
         botonCalcularTriangulo.setText("Calcular");
         botonCalcularTriangulo.addActionListener(new java.awt.event.ActionListener() {
@@ -93,45 +94,52 @@ public class JPanelTriangulo extends javax.swing.JPanel {
 
         labelTipoTriangulo.setText("Triangulo");
 
+        jPanelGraficaTriangulo.setPreferredSize(new java.awt.Dimension(400, 400));
+
+        javax.swing.GroupLayout jPanelGraficaTrianguloLayout = new javax.swing.GroupLayout(jPanelGraficaTriangulo);
+        jPanelGraficaTriangulo.setLayout(jPanelGraficaTrianguloLayout);
+        jPanelGraficaTrianguloLayout.setHorizontalGroup(
+            jPanelGraficaTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 561, Short.MAX_VALUE)
+        );
+        jPanelGraficaTrianguloLayout.setVerticalGroup(
+            jPanelGraficaTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addGap(54, 54, 54))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(labelCoordenadasX)
-                                    .addGap(18, 18, 18)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(coordenada1XTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel4))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(coordenada2XTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel5))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(coordenada3XTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel6)))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(botonCalcularTriangulo)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(labelCoordenadasY)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(coordenada1YTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(coordenada2YTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(coordenada3YTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(38, 38, 38)))
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(labelCoordenadasX)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(coordenada1XTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(coordenada2XTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(coordenada3XTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(botonCalcularTriangulo)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(labelCoordenadasY)
+                                .addGap(18, 18, 18)
+                                .addComponent(coordenada1YTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(coordenada2YTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(coordenada3YTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
@@ -141,8 +149,10 @@ public class JPanelTriangulo extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelTipoTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(labelAreaTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelPerimetroTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(524, Short.MAX_VALUE))
+                            .addComponent(labelPerimetroTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelGraficaTriangulo, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,7 +164,7 @@ public class JPanelTriangulo extends javax.swing.JPanel {
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
                     .addComponent(jLabel6))
-                .addGap(18, 18, 18)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCoordenadasX)
                     .addComponent(coordenada1XTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -180,7 +190,11 @@ public class JPanelTriangulo extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelTipoTriangulo))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelGraficaTriangulo, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
     
@@ -188,14 +202,16 @@ public class JPanelTriangulo extends javax.swing.JPanel {
         // TODO add your handling code here:
         //coordenadas para poder hallar el área y el perímetro del triángulo
         double areaTriangulo, perimetroTriangulo;
-        double coorX1 = Double.parseDouble(coordenada1XTriangulo.getText());
-        double coorX2 = Double.parseDouble(coordenada2XTriangulo.getText());
-        double coorX3 = Double.parseDouble(coordenada3XTriangulo.getText());
-        double coorY1 = Double.parseDouble(coordenada1YTriangulo.getText());
-        double coorY2 = Double.parseDouble(coordenada2YTriangulo.getText());
-        double coorY3 = Double.parseDouble(coordenada3YTriangulo.getText());
+        int coorX1 = Integer.parseInt(coordenada1XTriangulo.getText());
+        int coorX2 = Integer.parseInt(coordenada2XTriangulo.getText());
+        int coorX3 = Integer.parseInt(coordenada3XTriangulo.getText());
+        int coorY1 = Integer.parseInt(coordenada1YTriangulo.getText());
+        int coorY2 = Integer.parseInt(coordenada2YTriangulo.getText());
+        int coorY3 = Integer.parseInt(coordenada3YTriangulo.getText());
+        
         //se envían al constructor las coordenadas para poder hallar el +área y el perímetro del triángulo
         Triangulo triangulo = new Triangulo(coorX1,coorX2,coorX3, coorY1, coorY2, coorY3);
+        triangulo.dibujarFigura(jPanelGraficaTriangulo.getGraphics(), coorX1, coorX2, coorX3, coorY1, coorY2, coorY3);
         //System.out.println(triangulo);
         triangulo.area();
         areaTriangulo = triangulo.areaTrian;
@@ -233,6 +249,7 @@ public class JPanelTriangulo extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanelGraficaTriangulo;
     private javax.swing.JLabel labelAreaTriangulo;
     private javax.swing.JLabel labelCoordenadasX;
     private javax.swing.JLabel labelCoordenadasY;

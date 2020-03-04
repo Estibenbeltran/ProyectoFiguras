@@ -1,6 +1,9 @@
 package edu.unicundi;
 
 //Clase triángulo que contiene métodos y atributos que heredan de la clase Figura, que es la clase padre
+
+import java.awt.Graphics;
+
 public class Triangulo extends Figura{
     
     //variables para clacular el area, el perímetro y demás
@@ -19,7 +22,12 @@ public class Triangulo extends Figura{
         this.longitud2 = longitud2;
         this.longitud3 = longitud3;
     }
-
+    
+    public void dibujarFigura(Graphics graficador, int coorX1, int coorX2, int coorX3, int coorY1, int coorY2, int coorY3){
+        int[] xCoordenadas = {coorX1 * 50 + 10, coorX2 * 50 + 10, coorX3 * 50 + 10};
+        int[] yCoordenadas = {510 - coorY1 * 50, 510 - coorY2 * 50, 510 - coorY3 * 50};
+        graficador.fillPolygon(xCoordenadas, yCoordenadas, 3);
+    }
     
     //método para hallar el área del tríangulo
     @Override
