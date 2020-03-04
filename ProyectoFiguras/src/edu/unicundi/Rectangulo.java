@@ -31,6 +31,15 @@ public class Rectangulo extends Figura {
         graficador.fillPolygon(xCoordenadas, yCoordenadas, 4);
     }
 
+    public void dibujarPlano(){
+        Graphics g = null;
+        for (int i = 10; i < 500; i += 10) {
+
+            g.drawLine(245, i, 255, i);
+            g.drawLine(i, 245, i, 255);
+
+        }
+    }
     //metodo heredado de la clase figura
     @Override
     public void coordenadaALados() {
