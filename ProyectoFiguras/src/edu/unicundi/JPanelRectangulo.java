@@ -231,18 +231,18 @@ public class JPanelRectangulo extends javax.swing.JPanel {
         
         //g =rectangulo.dibujarPlano();
         rectangulo.dibujarFigura(jPanelGraficaRectangulo.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
+        //rectangulo.dibujarPlano();
         rectangulo.coordenadaALados();
         //se llaman las funciones para poder calcular el área y el perímetro del rectángulo
         rectangulo.area();
         rectangulo.perimetro();
-        if (rectangulo.ladoA == rectangulo.ladoC && rectangulo.ladoB == rectangulo.ladoD) {
-            areaRectangulo = rectangulo.area;
-            perimetroRectangulo = rectangulo.perimetro;
-
+        if (rectangulo.getLadoA() == rectangulo.getLadoC() && rectangulo.getLadoB() == rectangulo.getLadoD()) {
+            areaRectangulo = rectangulo.getArea();
+            perimetroRectangulo = rectangulo.getPerimetro();
             labelAreaRectangulo.setText(Double.toString(areaRectangulo));
             labelPerimetroRectangulo.setText(Double.toString(perimetroRectangulo));
         } else {
-            labelValidacionRectangulo.setText("las coordenadas ingresadas no son un cuadrado");
+            labelValidacionRectangulo.setText("las coordenadas ingresadas no son un rectangulo");
         }
     }//GEN-LAST:event_botonCalcularRectanguloActionPerformed
 

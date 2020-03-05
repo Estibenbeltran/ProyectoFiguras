@@ -197,7 +197,7 @@ public class JPanelTriangulo extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-    
+
     private void botonCalcularTrianguloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularTrianguloActionPerformed
         // TODO add your handling code here:
         //coordenadas para poder hallar el área y el perímetro del triángulo
@@ -209,18 +209,18 @@ public class JPanelTriangulo extends javax.swing.JPanel {
         int coorY1 = Integer.parseInt(coordenada1YTriangulo.getText());
         int coorY2 = Integer.parseInt(coordenada2YTriangulo.getText());
         int coorY3 = Integer.parseInt(coordenada3YTriangulo.getText());
-        
+
         //se envían al constructor las coordenadas para poder hallar el +área y el perímetro del triángulo
-        Triangulo triangulo = new Triangulo(coorX1,coorX2,coorX3, coorY1, coorY2, coorY3);
+        Triangulo triangulo = new Triangulo(coorX1, coorX2, coorX3, coorY1, coorY2, coorY3);
         triangulo.dibujarFigura(jPanelGraficaTriangulo.getGraphics(), coorX1, coorX2, coorX3, coorY1, coorY2, coorY3);
         //System.out.println(triangulo);
         triangulo.perimetro();
         triangulo.area();
         triangulo.difTriangulos();
-        areaTriangulo = triangulo.area;
-        perimetroTriangulo = triangulo.perimetro;    
+        areaTriangulo = triangulo.getArea();
+        perimetroTriangulo = triangulo.getPerimetro();
         difTriangulo = triangulo.difTriangulo;
-        
+
         //se muestran los resultados
         labelAreaTriangulo.setText(Double.toString(areaTriangulo));
         labelPerimetroTriangulo.setText(Double.toString(perimetroTriangulo));

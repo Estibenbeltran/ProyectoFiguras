@@ -1,22 +1,23 @@
 package edu.unicundi;
 
 //Clase triángulo que contiene métodos y atributos que heredan de la clase Figura, que es la clase padre
-
 import java.awt.Graphics;
 import java.text.DecimalFormat;
 
-public class Triangulo extends Figura{
+public class Triangulo extends Figura {
+
     DecimalFormat formato = new DecimalFormat("#.000");
     String difTriangulo;
     double perimetroTriangulo;
+
     //constructor de la clase, el cuál recibe las 6 coordenadas del triángulo
     public Triangulo(double coorX1, double coorX2, double coorX3, double coorY1, double coorY2, double coorY3) {
-        this.coorX1 = coorX1;
-        this.coorX2 = coorX2;
-        this.coorX3 = coorX3;
-        this.coorY1 = coorY1;
-        this.coorY2 = coorY2;
-        this.coorY3 = coorY3;
+        super.setCoorX1(coorX1);
+        super.setCoorX2(coorX2);
+        super.setCoorX3(coorX3);
+        super.setCoorY1(coorY1);
+        super.setCoorY2(coorY2);
+        super.setCoorY3(coorY3);
     }
     
    
@@ -32,36 +33,38 @@ public class Triangulo extends Figura{
         int[] yCoordenadas = {250 - coorY1 * 50, 250 - coorY2 * 50, 250 - coorY3 * 50};
         graficador.fillPolygon(xCoordenadas, yCoordenadas, 3);
     }
-    
+
     //método para hallar el perimetro del tríangulo
     @Override
     public void perimetro() {
         //para hallar el ára del triángulo, primero se deben calcular las tres longitudes
-        ladoA = Math.sqrt(Math.pow(coorX2 - coorX1, 2) + Math.pow(coorY2 - coorY1, 2));
-        ladoB = Math.sqrt(Math.pow(coorX3 - coorX2, 2) + Math.pow(coorY3 - coorY2, 2));
-        ladoC = Math.sqrt(Math.pow(coorX3 - coorX1, 2) + Math.pow(coorY3 - coorY1, 2));
-        
+        setLadoA(Math.sqrt(Math.pow((getCoorX2() - getCoorX1()), 2) + Math.pow((getCoorY2() - getCoorY1()), 2)));//calculo de ladoA
+        setLadoB(Math.sqrt(Math.pow((getCoorX3() - getCoorX2()), 2) + Math.pow((getCoorY3() - getCoorY2()), 2)));//calculo de ladoB
+        setLadoC(Math.sqrt(Math.pow((getCoorX3() - getCoorX1()), 2) + Math.pow((getCoorY3() - getCoorY1()), 2)));//calculo de ladoC
+
         //el perímetro del triángulo es la suma de sus tres magnitudes
-        perimetro = ladoA + ladoB + ladoC;
-        System.out.println("perimetro: "+ formato.format(perimetro) +" ladoA: "+ formato.format(ladoA) +" ladoB: "+ formato.format(ladoB) +" ladoC: "+ formato.format(ladoC));
+        setPerimetro(getLadoA() + getLadoB() + getLadoC());
+        System.out.println("perimetro: " + formato.format(getPerimetro()) + " ladoA: " + formato.format(getLadoA()) + " ladoB: " + formato.format(getLadoB()) + " ladoC: " + formato.format(getLadoC()));
     }
-    
+
     //método para hallar el área del tríangulo
     @Override
     public void area() {
         //para aplicar la fórmula de Heron, hay que dividir el perímetro anteriormente encontrado en dos
-        perimetroTriangulo = perimetro/2; 
-        
+        perimetroTriangulo = getPerimetro() / 2;
+
         //se aplica la fórmula de Heron
-        area = Math.sqrt(perimetroTriangulo * (perimetroTriangulo - ladoA) * (perimetroTriangulo - ladoB) * (perimetroTriangulo - ladoC));
-        System.out.println("perimetro/2: " +formato.format(perimetroTriangulo) + " area: " + formato.format(area));
-   }
-    
-    public void difTriangulos(){
-        if(ladoA == ladoB && ladoB != ladoC || ladoA == ladoC && ladoC != ladoA || ladoB == ladoC && ladoC != ladoA  ){
+        setArea(Math.sqrt(perimetroTriangulo * (perimetroTriangulo - getLadoA()) * (perimetroTriangulo - getLadoB()) * (perimetroTriangulo - getLadoC())));
+        System.out.println("perimetro/2: " + formato.format(perimetroTriangulo) + " area: " + formato.format(getArea()));
+    }
+
+    public void difTriangulos() {
+        if (getLadoA() == getLadoB() && getLadoB() != getLadoC() || getLadoA() == getLadoC() && getLadoC() != getLadoB() || getLadoB() == getLadoC() && getLadoC() != getLadoA()) {
             difTriangulo = "triangulo isosceles";
-        }else if(ladoA == ladoB && ladoB == ladoC && ladoA == ladoC){
+        } else if (getLadoA() == getLadoB() && getLadoB() == getLadoC() && getLadoA() == getLadoC()) {
             difTriangulo = "triangulo equilatero";
-        }else difTriangulo = "triangulo Escaleno";
+        } else {
+            difTriangulo = "triangulo Escaleno";
+        }
     }
 }

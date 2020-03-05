@@ -236,11 +236,11 @@ public class JPanelCuadrado extends javax.swing.JPanel {
         cuadrado.coordenadaALados();
         cuadrado.perimetro();
         cuadrado.area();
-        if (cuadrado.ladoA == cuadrado.ladoB) {
+        if (cuadrado.getLadoA() == cuadrado.getLadoB()) {
             //System.out.println(cuadrado.ladoA+"asdasd lado a");
-            areaCuadrado = cuadrado.area;
+            areaCuadrado = cuadrado.getArea();
             //System.out.println("area   "+areaCuadrado);
-            perimetroCuadrado = cuadrado.perimetro;
+            perimetroCuadrado = cuadrado.getPerimetro();
             //se añaden al Label para mostrar en pantalla el área y el perímetro
             labelAreaCuadrado.setText(Double.toString(areaCuadrado));
             labelPerimetroCuadrado.setText(Double.toString(perimetroCuadrado));
