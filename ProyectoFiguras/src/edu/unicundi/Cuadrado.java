@@ -27,6 +27,13 @@ public class Cuadrado extends Figura {
     }
 
     public void dibujarFigura(Graphics graficador, int coorX1, int coorX2, int coorX3, int coorX4, int coorY1, int coorY2, int coorY3, int coorY4) {
+        
+         for (int i = 10; i < 500; i += 10) {
+
+            graficador.drawLine(245, i, 255, i);
+            graficador.drawLine(i, 245, i, 255);
+        }
+         
         int[] xCoordenadas = {coorX1 * 50 + 10, coorX2 * 50 + 10, coorX3 * 50 + 10, coorX4 * 50 + 10};
         int[] yCoordenadas = {510 - coorY1 * 50, 510 - coorY2 * 50, 510 - coorY3 * 50, 510 - coorY4 * 50};
         graficador.fillPolygon(xCoordenadas, yCoordenadas, 4);

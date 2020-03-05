@@ -66,7 +66,7 @@ public class JFrameInicio extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Bienvenido, escoja la figura a evaluar ");
+        jLabel1.setText("Bienvenido, escoja las figuras a evaluar ");
 
         jLabel2.setText("Cuadrado");
 

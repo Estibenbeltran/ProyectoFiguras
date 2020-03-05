@@ -103,7 +103,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Bienvenido, escoja la figura a evaluar "/>
+        <Property name="text" type="java.lang.String" value="Bienvenido, escoja las figuras a evaluar "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
