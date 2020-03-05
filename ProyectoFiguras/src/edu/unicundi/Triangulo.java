@@ -28,8 +28,8 @@ public class Triangulo extends Figura{
             graficador.drawLine(i, 245, i, 255);
         }
          
-        int[] xCoordenadas = {coorX1 * 50 + 10, coorX2 * 50 + 10, coorX3 * 50 + 10};
-        int[] yCoordenadas = {510 - coorY1 * 50, 510 - coorY2 * 50, 510 - coorY3 * 50};
+        int[] xCoordenadas = {coorX1 * 50 + 250, coorX2 * 50 + 250, coorX3 * 50 + 250};
+        int[] yCoordenadas = {250 - coorY1 * 50, 250 - coorY2 * 50, 250 - coorY3 * 50};
         graficador.fillPolygon(xCoordenadas, yCoordenadas, 3);
     }
     
