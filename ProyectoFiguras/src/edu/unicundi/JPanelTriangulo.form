@@ -64,12 +64,12 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelTipoTriangulo" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
                           <Component id="labelAreaTriangulo" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
                           <Component id="labelPerimetroTriangulo" alignment="0" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Component id="labelTipoTriangulo" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanelGraficaTriangulo" pref="561" max="32767" attributes="0"/>
+                      <Component id="jPanelGraficaTriangulo" pref="539" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -225,7 +225,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="561" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="539" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">

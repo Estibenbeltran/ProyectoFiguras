@@ -48,7 +48,7 @@ public class JFrameInicio extends javax.swing.JFrame {
             .addGap(0, 407, Short.MAX_VALUE)
         );
 
-        jComboBoxFigura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Triiangulo", "Cuadrado", "Rectangulo" }));
+        jComboBoxFigura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Triangulo", "Cuadrado", "Rectangulo" }));
         jComboBoxFigura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxFiguraActionPerformed(evt);

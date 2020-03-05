@@ -100,7 +100,7 @@ public class JPanelTriangulo extends javax.swing.JPanel {
         jPanelGraficaTriangulo.setLayout(jPanelGraficaTrianguloLayout);
         jPanelGraficaTrianguloLayout.setHorizontalGroup(
             jPanelGraficaTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 561, Short.MAX_VALUE)
+            .addGap(0, 539, Short.MAX_VALUE)
         );
         jPanelGraficaTrianguloLayout.setVerticalGroup(
             jPanelGraficaTrianguloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,11 +147,11 @@ public class JPanelTriangulo extends javax.swing.JPanel {
                             .addComponent(jLabel12))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelTipoTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(labelAreaTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelPerimetroTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelPerimetroTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelTipoTriangulo, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanelGraficaTriangulo, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)))
+                        .addComponent(jPanelGraficaTriangulo, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
