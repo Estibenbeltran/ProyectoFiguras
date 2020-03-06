@@ -415,6 +415,7 @@ public class JPanelCuadrado extends javax.swing.JPanel {
                 //se envían al constructor las coordenadas para poder hallar el +área y el perímetro del triángulo
 
                 //System.out.println(triangulo);
+                ((Triangulo) (figura)).coordenadaALados();
                 ((Triangulo) (figura)).perimetro();
                 ((Triangulo) (figura)).area();
                 ((Triangulo) (figura)).difTriangulos();
