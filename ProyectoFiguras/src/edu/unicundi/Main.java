@@ -23,10 +23,6 @@ public class Main {
         //se inicializan los páneles
         JPanelCuadrado panelCuadrado = new JPanelCuadrado();
         panelCuadrado.setVisible(true);
-        JPanelRectangulo panelRectangulo = new JPanelRectangulo();
-        panelRectangulo.setVisible(true);
-        JPanelTriangulo panelTriangulo = new JPanelTriangulo();
-        panelTriangulo.setVisible(true);
     }
     
 }

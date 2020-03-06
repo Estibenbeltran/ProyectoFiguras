@@ -6,6 +6,8 @@
 package edu.unicundi;
 
 import java.awt.BorderLayout;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -16,8 +18,18 @@ public class JFrameInicio extends javax.swing.JFrame {
     /**
      * Creates new form JFrameInicio
      */
+
+        JPanelCuadrado panelCuadrado = new JPanelCuadrado();
     public JFrameInicio() {
         initComponents();
+         
+        panelCuadrado.setSize(860, 484);
+        panelCuadrado.setLocation(5, 5);
+        
+        panelPrincipal.removeAll();
+        panelPrincipal.add(panelCuadrado, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
     }
 
     /**
@@ -85,41 +97,7 @@ public class JFrameInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBoxFiguraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxFiguraActionPerformed
-        int c = 2;
-        switch(jComboBoxFigura.getSelectedIndex()){
-            case 0:
-                JPanelTriangulo panelTriangulo = new JPanelTriangulo();
-        panelTriangulo.setSize(860,484);
-        panelTriangulo.setLocation(5, 5);
-        
-        panelPrincipal.removeAll();
-        panelPrincipal.add(panelTriangulo,BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
-                break;
-            case 1:
-                JPanelCuadrado panelCuadrado = new JPanelCuadrado();
-                panelCuadrado.setSize(860,484);
-                panelCuadrado.setLocation(5, 5);
-
-                panelPrincipal.removeAll();
-                panelPrincipal.add(panelCuadrado,BorderLayout.CENTER);
-                panelPrincipal.revalidate();
-                panelPrincipal.repaint();
-                break;
-            case 2:
-                JPanelRectangulo panelRectangulo = new JPanelRectangulo();
-        panelRectangulo.setSize(860,484);
-        panelRectangulo.setLocation(5, 5);
-        
-        panelPrincipal.removeAll();
-        panelPrincipal.add(panelRectangulo,BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
-                
-                break;
-                
-        }
+      panelCuadrado.setIndex(jComboBoxFigura.getSelectedIndex());
     }//GEN-LAST:event_jComboBoxFiguraActionPerformed
 
     /**
