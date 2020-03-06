@@ -212,7 +212,7 @@ public class JPanelTriangulo extends javax.swing.JPanel {
 
         //se envían al constructor las coordenadas para poder hallar el +área y el perímetro del triángulo
         Triangulo triangulo = new Triangulo(coorX1, coorX2, coorX3, coorY1, coorY2, coorY3);
-        triangulo.dibujarFigura(jPanelGraficaTriangulo.getGraphics(), coorX1, coorX2, coorX3, coorY1, coorY2, coorY3);
+        //triangulo.dibujarFigura(jPanelGraficaTriangulo.getGraphics(), coorX1, coorX2, coorX3, coorY1, coorY2, coorY3);
         //System.out.println(triangulo);
         triangulo.perimetro();
         triangulo.area();

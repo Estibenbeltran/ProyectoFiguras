@@ -5,6 +5,7 @@
  */
 package edu.unicundi;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 /**
@@ -27,6 +28,8 @@ public class Rectangulo extends Figura {
 
     public void dibujarFigura(Graphics graficador, int coorX1, int coorX2, int coorX3, int coorX4, int coorY1, int coorY2, int coorY3, int coorY4) {
 
+    
+        
         for (int i = 10; i < 500; i += 10) {
 
             graficador.drawLine(245, i, 255, i);

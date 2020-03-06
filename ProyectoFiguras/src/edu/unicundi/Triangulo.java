@@ -1,6 +1,7 @@
 package edu.unicundi;
 
 //Clase triángulo que contiene métodos y atributos que heredan de la clase Figura, que es la clase padre
+import java.awt.Color;
 import java.awt.Graphics;
 import java.text.DecimalFormat;
 
@@ -20,8 +21,23 @@ public class Triangulo extends Figura {
         super.setCoorY3(coorY3);
     }
 
-    public void dibujarFigura(Graphics graficador, int coorX1, int coorX2, int coorX3, int coorY1, int coorY2, int coorY3) {
-
+    public void dibujarFigura(Graphics graficador, int coorX1, int coorX2, int coorX3, int coorY1, int coorY2, int coorY3, String color) {
+        System.out.println(color);
+        switch (color) {
+            case "Azul":
+                graficador.setColor(Color.BLUE);
+                break;
+            case "Rojo":
+                graficador.setColor(Color.RED);
+                break;
+            case "Amarillo":
+                graficador.setColor(Color.YELLOW);
+                break;
+            case "Verde":
+                graficador.setColor(Color.GREEN);
+                break;
+        }    
+        
         for (int i = 10; i < 500; i += 10) {
 
             graficador.drawLine(245, i, 255, i);

@@ -242,7 +242,7 @@ public class JPanelRectangulo extends javax.swing.JPanel {
         //Graphics g;
 
         //g =rectangulo.dibujarPlano();
-        rectangulo.dibujarFigura(jPanelGraficaRectangulo.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
+        //rectangulo.dibujarFigura(jPanelGraficaRectangulo.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
         //rectangulo.dibujarPlano();
         rectangulo.coordenadaALados();
         //se llaman las funciones para poder calcular el área y el perímetro del rectángulo
@@ -278,7 +278,7 @@ public class JPanelRectangulo extends javax.swing.JPanel {
 
         //Graphics g;
         //g =rectangulo.dibujarPlano();
-        rectangulo.dibujarFigura(jPanelGraficaRectangulo.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
+        //rectangulo.dibujarFigura(jPanelGraficaRectangulo.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
         //rectangulo.dibujarPlano();
         rectangulo.coordenadaALados();
         //se llaman las funciones para poder calcular el área y el perímetro del rectángulo
