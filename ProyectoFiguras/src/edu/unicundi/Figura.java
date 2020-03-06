@@ -16,7 +16,7 @@ public abstract class Figura implements IFigura {
     //declaracion de variables
     private double ladoA, ladoB, ladoC, ladoD, altura, area, perimetro;
     private double coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4;
-    private String color;
+    private String color, difTriangulo;
     private double coordenada1, coordenada2, coordenada3, coordenada4;
 
     public void dibujarFigura() {
@@ -185,5 +185,13 @@ public abstract class Figura implements IFigura {
 
     public void setCoordenada4(double coordenada4) {
         this.coordenada4 = coordenada4;
+    }
+
+    public String getDifTriangulo() {
+        return difTriangulo;
+    }
+
+    public void setDifTriangulo(String difTriangulo) {
+        this.difTriangulo = difTriangulo;
     }
 }

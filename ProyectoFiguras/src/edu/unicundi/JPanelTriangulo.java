@@ -219,7 +219,7 @@ public class JPanelTriangulo extends javax.swing.JPanel {
         triangulo.difTriangulos();
         areaTriangulo = triangulo.getArea();
         perimetroTriangulo = triangulo.getPerimetro();
-        difTriangulo = triangulo.difTriangulo;
+        difTriangulo = triangulo.getDifTriangulo();
 
         //se muestran los resultados
         labelAreaTriangulo.setText(Double.toString(areaTriangulo));

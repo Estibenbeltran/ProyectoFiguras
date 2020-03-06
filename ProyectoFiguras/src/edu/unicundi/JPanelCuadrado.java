@@ -24,6 +24,8 @@ public class JPanelCuadrado extends javax.swing.JPanel {
      * Creates new form JPanelCuadrado
      */
     private int index = 0;
+    double areaCuadrado, perimetroCuadrado;
+    String difTriangulo;
 
     public JPanelCuadrado(int index) {
         this.index = index;
@@ -283,7 +285,6 @@ public class JPanelCuadrado extends javax.swing.JPanel {
     private void botonCalcularCuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularCuadradoActionPerformed
         // TODO add your handling code here:
         //coordenadas para poder calcular el cuadrado
-        double areaCuadrado, perimetroCuadrado;
         int coorX1 = Integer.parseInt(getCoordenada1XCuadrado().getText());
         int coorX2 = Integer.parseInt(getCoordenada2XCuadrado().getText());
         int coorX3 = Integer.parseInt(getCoordenada3XCuadrado().getText());
@@ -299,17 +300,18 @@ public class JPanelCuadrado extends javax.swing.JPanel {
                 //se envían al constructor las coordenadas para poder hallar el +área y el perímetro del triángulo
                 Triangulo triangulo = new Triangulo(coorX1, coorX2, coorX3, coorY1, coorY2, coorY3);
                 triangulo.dibujarFigura(jPanelGraficaCuadrado.getGraphics(), coorX1, coorX2, coorX3, coorY1, coorY2, coorY3, jComboBoxColor.getSelectedItem().toString());
+                triangulo.coordenadaALados();
                 triangulo.perimetro();
                 triangulo.area();
                 triangulo.difTriangulos();
                 areaCuadrado = triangulo.getArea();
                 perimetroCuadrado = triangulo.getPerimetro();
-                //difTriangulo = triangulo.difTriangulo;
+                difTriangulo = triangulo.getDifTriangulo();
 
                 //se muestran los resultados
                 labelAreaCuadrado.setText(Double.toString(areaCuadrado));
                 labelPerimetroCuadrado.setText(Double.toString(perimetroCuadrado));
-                //labelTipoCuadrado.setText(difTriangulo);
+                labelValidacionCuadrado.setText(difTriangulo);
                 break;
 
             case 1:
@@ -364,7 +366,7 @@ public class JPanelCuadrado extends javax.swing.JPanel {
     }//GEN-LAST:event_botonCalcularCuadradoActionPerformed
 
     private void botonGuardarCuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarCuadradoActionPerformed
-        double areaCuadrado, perimetroCuadrado;
+
         int coorX1 = Integer.parseInt(getCoordenada1XCuadrado().getText());
         int coorX2 = Integer.parseInt(getCoordenada2XCuadrado().getText());
         int coorX3 = Integer.parseInt(getCoordenada3XCuadrado().getText());
@@ -405,7 +407,6 @@ public class JPanelCuadrado extends javax.swing.JPanel {
 
     private void jComboBoxMostrarFiguraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxMostrarFiguraActionPerformed
 
-        double areaCuadrado, perimetroCuadrado;
         Figura figura = listaFigura.get(jComboBoxMostrarFigura.getSelectedIndex());
         //int coorX1 = Integer.parseInt(((listaFigura.get(jComboBoxMostrarFigura.getSelectedIndex()))));
         int coorX1 = (int) (figura.getCoorX1());
@@ -438,18 +439,18 @@ public class JPanelCuadrado extends javax.swing.JPanel {
                 ((Triangulo) (figura)).difTriangulos();
                 areaCuadrado = ((Triangulo) (figura)).getArea();
                 perimetroCuadrado = ((Triangulo) (figura)).getPerimetro();
-                //difTriangulo = triangulo.difTriangulo;
+                difTriangulo = ((Triangulo) (figura)).getDifTriangulo();
 
                 //se muestran los resultados
                 labelAreaCuadrado.setText(Double.toString(areaCuadrado));
                 labelPerimetroCuadrado.setText(Double.toString(perimetroCuadrado));
-                //labelTipoCuadrado.setText(difTriangulo);
+                labelValidacionCuadrado.setText(difTriangulo);
 
                 break;
 
             case 1:
                 //se envían las coordenadas al constructor de la clase Cuadrado
-                ((Cuadrado) (figura)).dibujarFigura(jPanelGraficaCuadrado.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4 , jComboBoxColor.getSelectedItem().toString());
+                ((Cuadrado) (figura)).dibujarFigura(jPanelGraficaCuadrado.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4, jComboBoxColor.getSelectedItem().toString());
 
                 //se llaman las funciones para poder calcular el área y el perímetro
                 ((Cuadrado) (figura)).coordenadaALados();

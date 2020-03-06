@@ -6,9 +6,8 @@ import java.awt.Graphics;
 import java.text.DecimalFormat;
 
 public class Triangulo extends Figura {
-
+    
     DecimalFormat formato = new DecimalFormat("#.000");
-    String difTriangulo;
     double perimetroTriangulo;
 
     //constructor de la clase, el cuál recibe las 6 coordenadas del triángulo
@@ -39,16 +38,16 @@ public class Triangulo extends Figura {
         }    
         
         for (int i = 10; i < 500; i += 10) {
-
+            
             graficador.drawLine(245, i, 255, i);
             graficador.drawLine(i, 245, i, 255);
         }
-
+        
         int[] xCoordenadas = {coorX1 * 50 + 250, coorX2 * 50 + 250, coorX3 * 50 + 250};
         int[] yCoordenadas = {250 - coorY1 * 50, 250 - coorY2 * 50, 250 - coorY3 * 50};
         graficador.fillPolygon(xCoordenadas, yCoordenadas, 3);
     }
-
+    
     @Override
     public void coordenadaALados() {
         //para hallar el area del triángulo, primero se deben calcular las tres longitudes
@@ -62,7 +61,7 @@ public class Triangulo extends Figura {
     public void perimetro() {
         //el perímetro del triángulo es la suma de sus tres magnitudes
         setPerimetro(getLadoA() + getLadoB() + getLadoC());
-        System.out.println("perimetro: " + formato.format(getPerimetro()) + " ladoA: " + formato.format(getLadoA()) + " ladoB: " + formato.format(getLadoB()) + " ladoC: " + formato.format(getLadoC()));
+        //System.out.println("perimetro: " + formato.format(getPerimetro()) + " ladoA: " + formato.format(getLadoA()) + " ladoB: " + formato.format(getLadoB()) + " ladoC: " + formato.format(getLadoC()));
     }
 
     //método para hallar el área del tríangulo
@@ -73,17 +72,17 @@ public class Triangulo extends Figura {
 
         //se aplica la fórmula de Heron
         setArea(Math.sqrt(perimetroTriangulo * (perimetroTriangulo - getLadoA()) * (perimetroTriangulo - getLadoB()) * (perimetroTriangulo - getLadoC())));
-        System.out.println("perimetro/2: " + formato.format(perimetroTriangulo) + " area: " + formato.format(getArea()));
+        //System.out.println("perimetro/2: " + formato.format(perimetroTriangulo) + " area: " + formato.format(getArea()));
     }
-
+    
     public void difTriangulos() {
         if (getLadoA() == getLadoB() && getLadoB() != getLadoC() || getLadoA() == getLadoC() && getLadoC() != getLadoB() || getLadoB() == getLadoC() && getLadoC() != getLadoA()) {
-            difTriangulo = "triangulo isosceles";
+            setDifTriangulo("triangulo isosceles");
         } else if (getLadoA() == getLadoB() && getLadoB() == getLadoC() && getLadoA() == getLadoC()) {
-            difTriangulo = "triangulo equilatero";
+            setDifTriangulo("triangulo equilatero");
         } else {
-            difTriangulo = "triangulo Escaleno";
+            setDifTriangulo("triangulo Escaleno");
         }
     }
-
+    
 }
