@@ -10,5 +10,5 @@ package edu.unicundi;
  * @author daiyd
  */
 public class Dibujo {
-    
+
 }

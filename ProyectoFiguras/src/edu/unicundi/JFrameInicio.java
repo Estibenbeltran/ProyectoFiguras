@@ -18,14 +18,14 @@ public class JFrameInicio extends javax.swing.JFrame {
     /**
      * Creates new form JFrameInicio
      */
+    JPanelCuadrado panelCuadrado = new JPanelCuadrado();
 
-        JPanelCuadrado panelCuadrado = new JPanelCuadrado();
     public JFrameInicio() {
         initComponents();
-         
+
         panelCuadrado.setSize(860, 484);
         panelCuadrado.setLocation(5, 5);
-        
+
         panelPrincipal.removeAll();
         panelPrincipal.add(panelCuadrado, BorderLayout.CENTER);
         panelPrincipal.revalidate();
@@ -97,7 +97,7 @@ public class JFrameInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBoxFiguraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxFiguraActionPerformed
-      panelCuadrado.setIndex(jComboBoxFigura.getSelectedIndex());
+        panelCuadrado.setIndex(jComboBoxFigura.getSelectedIndex());
     }//GEN-LAST:event_jComboBoxFiguraActionPerformed
 
     /**

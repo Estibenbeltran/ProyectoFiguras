@@ -19,29 +19,31 @@ public class Triangulo extends Figura {
         super.setCoorY2(coorY2);
         super.setCoorY3(coorY3);
     }
-    
-   
-    public void dibujarFigura(Graphics graficador, int coorX1, int coorX2, int coorX3, int coorY1, int coorY2, int coorY3){
-        
-         for (int i = 10; i < 500; i += 10) {
+
+    public void dibujarFigura(Graphics graficador, int coorX1, int coorX2, int coorX3, int coorY1, int coorY2, int coorY3) {
+
+        for (int i = 10; i < 500; i += 10) {
 
             graficador.drawLine(245, i, 255, i);
             graficador.drawLine(i, 245, i, 255);
         }
-         
+
         int[] xCoordenadas = {coorX1 * 50 + 250, coorX2 * 50 + 250, coorX3 * 50 + 250};
         int[] yCoordenadas = {250 - coorY1 * 50, 250 - coorY2 * 50, 250 - coorY3 * 50};
         graficador.fillPolygon(xCoordenadas, yCoordenadas, 3);
     }
 
-    //método para hallar el perimetro del tríangulo
     @Override
-    public void perimetro() {
-        //para hallar el ára del triángulo, primero se deben calcular las tres longitudes
+    public void coordenadaALados() {
+        //para hallar el area del triángulo, primero se deben calcular las tres longitudes
         setLadoA(Math.sqrt(Math.pow((getCoorX2() - getCoorX1()), 2) + Math.pow((getCoorY2() - getCoorY1()), 2)));//calculo de ladoA
         setLadoB(Math.sqrt(Math.pow((getCoorX3() - getCoorX2()), 2) + Math.pow((getCoorY3() - getCoorY2()), 2)));//calculo de ladoB
         setLadoC(Math.sqrt(Math.pow((getCoorX3() - getCoorX1()), 2) + Math.pow((getCoorY3() - getCoorY1()), 2)));//calculo de ladoC
+    }
 
+    //método para hallar el perimetro del tríangulo
+    @Override
+    public void perimetro() {
         //el perímetro del triángulo es la suma de sus tres magnitudes
         setPerimetro(getLadoA() + getLadoB() + getLadoC());
         System.out.println("perimetro: " + formato.format(getPerimetro()) + " ladoA: " + formato.format(getLadoA()) + " ladoB: " + formato.format(getLadoB()) + " ladoC: " + formato.format(getLadoC()));
@@ -67,4 +69,5 @@ public class Triangulo extends Figura {
             difTriangulo = "triangulo Escaleno";
         }
     }
+
 }

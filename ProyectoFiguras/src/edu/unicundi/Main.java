@@ -18,11 +18,11 @@ public class Main {
         //se inicializa el JFrame
         JFrameInicio frame = new JFrameInicio();
         //se hace visible y se le da un tamaño
-        frame.setVisible (true);
+        frame.setVisible(true);
         frame.setSize(900, 700);
         //se inicializan los páneles
         JPanelCuadrado panelCuadrado = new JPanelCuadrado();
         panelCuadrado.setVisible(true);
     }
-    
+
 }

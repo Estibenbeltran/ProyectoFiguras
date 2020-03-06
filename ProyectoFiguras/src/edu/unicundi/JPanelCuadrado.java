@@ -23,7 +23,7 @@ public class JPanelCuadrado extends javax.swing.JPanel {
     /**
      * Creates new form JPanelCuadrado
      */
-    private int index=0;
+    private int index = 0;
 
     public JPanelCuadrado(int index) {
         this.index = index;
@@ -387,63 +387,61 @@ public class JPanelCuadrado extends javax.swing.JPanel {
     }//GEN-LAST:event_botonGuardarCuadradoActionPerformed
 
     private void jComboBoxMostrarFiguraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxMostrarFiguraActionPerformed
-        
-        
-        
+
         double areaCuadrado, perimetroCuadrado;
         Figura figura = listaFigura.get(jComboBoxMostrarFigura.getSelectedIndex());
         //int coorX1 = Integer.parseInt(((listaFigura.get(jComboBoxMostrarFigura.getSelectedIndex()))));
-        int coorX1 = (int)(figura.getCoorX1());
-        int coorX2 = (int)(figura.getCoorX2());
-        int coorX3 = (int)(figura.getCoorX3());
-        int coorX4 = (int)(figura.getCoorX4());
-        int coorY1 = (int)(figura.getCoorY1());
-        int coorY2 = (int)(figura.getCoorY2());
-        int coorY3 = (int)(figura.getCoorY3());
-        int coorY4 = (int)(figura.getCoorY4());
+        int coorX1 = (int) (figura.getCoorX1());
+        int coorX2 = (int) (figura.getCoorX2());
+        int coorX3 = (int) (figura.getCoorX3());
+        int coorX4 = (int) (figura.getCoorX4());
+        int coorY1 = (int) (figura.getCoorY1());
+        int coorY2 = (int) (figura.getCoorY2());
+        int coorY3 = (int) (figura.getCoorY3());
+        int coorY4 = (int) (figura.getCoorY4());
         int numeroFigura;
-        if(jComboBoxMostrarFigura.getSelectedItem().toString().equals("Triangulo")){
+        if (jComboBoxMostrarFigura.getSelectedItem().toString().equals("Triangulo")) {
             numeroFigura = 0;
-        }else if(jComboBoxMostrarFigura.getSelectedItem().toString().equals("Cuadrado")){
+        } else if (jComboBoxMostrarFigura.getSelectedItem().toString().equals("Cuadrado")) {
             numeroFigura = 1;
-        }else{
+        } else {
             numeroFigura = 2;
-        } 
-        
+        }
+
         switch (numeroFigura) {
 
             case 0:
-                ((Triangulo)(figura)).dibujarFigura(jPanelGraficaCuadrado.getGraphics(), coorX1, coorX2, coorX3, coorY1, coorY2, coorY3);
+                ((Triangulo) (figura)).dibujarFigura(jPanelGraficaCuadrado.getGraphics(), coorX1, coorX2, coorX3, coorY1, coorY2, coorY3);
                 //se envían al constructor las coordenadas para poder hallar el +área y el perímetro del triángulo
-                
+
                 //System.out.println(triangulo);
-                ((Triangulo)(figura)).perimetro();
-                ((Triangulo)(figura)).area();
-                ((Triangulo)(figura)).difTriangulos();
-                areaCuadrado = ((Triangulo)(figura)).getArea();
-                perimetroCuadrado = ((Triangulo)(figura)).getPerimetro();
+                ((Triangulo) (figura)).perimetro();
+                ((Triangulo) (figura)).area();
+                ((Triangulo) (figura)).difTriangulos();
+                areaCuadrado = ((Triangulo) (figura)).getArea();
+                perimetroCuadrado = ((Triangulo) (figura)).getPerimetro();
                 //difTriangulo = triangulo.difTriangulo;
 
                 //se muestran los resultados
                 labelAreaCuadrado.setText(Double.toString(areaCuadrado));
                 labelPerimetroCuadrado.setText(Double.toString(perimetroCuadrado));
                 //labelTipoCuadrado.setText(difTriangulo);
-                
+
                 break;
 
             case 1:
                 //se envían las coordenadas al constructor de la clase Cuadrado
-                ((Cuadrado)(figura)).dibujarFigura(jPanelGraficaCuadrado.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
-              
+                ((Cuadrado) (figura)).dibujarFigura(jPanelGraficaCuadrado.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
+
                 //se llaman las funciones para poder calcular el área y el perímetro
-                ((Cuadrado)(figura)).coordenadaALados();
-                ((Cuadrado)(figura)).perimetro();
-                ((Cuadrado)(figura)).area();
-                if (((Cuadrado)(figura)).getLadoA() == ((Cuadrado)(figura)).getLadoB()) {
+                ((Cuadrado) (figura)).coordenadaALados();
+                ((Cuadrado) (figura)).perimetro();
+                ((Cuadrado) (figura)).area();
+                if (((Cuadrado) (figura)).getLadoA() == ((Cuadrado) (figura)).getLadoB()) {
                     //System.out.println(cuadrado.ladoA+"asdasd lado a");
-                    areaCuadrado = ((Cuadrado)(figura)).getArea();
+                    areaCuadrado = ((Cuadrado) (figura)).getArea();
                     //System.out.println("area   "+areaCuadrado);
-                    perimetroCuadrado = ((Cuadrado)(figura)).getPerimetro();
+                    perimetroCuadrado = ((Cuadrado) (figura)).getPerimetro();
                     //se añaden al Label para mostrar en pantalla el área y el perímetro
                     labelAreaCuadrado.setText(Double.toString(areaCuadrado));
                     labelPerimetroCuadrado.setText(Double.toString(perimetroCuadrado));
@@ -452,18 +450,18 @@ public class JPanelCuadrado extends javax.swing.JPanel {
                 }
                 break;
 
-            case 2:     
-            //se envían las coordenadas al constructor
-                
-                ((Rectangulo)(figura)).dibujarFigura(jPanelGraficaCuadrado.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
+            case 2:
+                //se envían las coordenadas al constructor
+
+                ((Rectangulo) (figura)).dibujarFigura(jPanelGraficaCuadrado.getGraphics(), coorX1, coorX2, coorX3, coorX4, coorY1, coorY2, coorY3, coorY4);
                 //rectangulo.dibujarPlano();
-                ((Rectangulo)(figura)).coordenadaALados();
+                ((Rectangulo) (figura)).coordenadaALados();
                 //se llaman las funciones para poder calcular el área y el perímetro del rectángulo
-                ((Rectangulo)(figura)).area();
-                ((Rectangulo)(figura)).perimetro();
-                if (((Rectangulo)(figura)).getLadoA() == ((Rectangulo)(figura)).getLadoC() && ((Rectangulo)(figura)).getLadoB() == ((Rectangulo)(figura)).getLadoD()) {
-                    areaCuadrado = ((Rectangulo)(figura)).getArea();
-                    perimetroCuadrado = ((Rectangulo)(figura)).getPerimetro();
+                ((Rectangulo) (figura)).area();
+                ((Rectangulo) (figura)).perimetro();
+                if (((Rectangulo) (figura)).getLadoA() == ((Rectangulo) (figura)).getLadoC() && ((Rectangulo) (figura)).getLadoB() == ((Rectangulo) (figura)).getLadoD()) {
+                    areaCuadrado = ((Rectangulo) (figura)).getArea();
+                    perimetroCuadrado = ((Rectangulo) (figura)).getPerimetro();
                     labelAreaCuadrado.setText(Double.toString(areaCuadrado));
                     labelPerimetroCuadrado.setText(Double.toString(perimetroCuadrado));
                 } else {
@@ -472,7 +470,7 @@ public class JPanelCuadrado extends javax.swing.JPanel {
                 break;
 
         }
-        
+
 
     }//GEN-LAST:event_jComboBoxMostrarFiguraActionPerformed
 
@@ -630,5 +628,5 @@ public class JPanelCuadrado extends javax.swing.JPanel {
     public void setCoordenada4YCuadrado(javax.swing.JTextField coordenada4YCuadrado) {
         this.coordenada4YCuadrado = coordenada4YCuadrado;
     }
-    
+
 }

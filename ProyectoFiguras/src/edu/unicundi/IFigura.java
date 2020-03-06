@@ -10,5 +10,14 @@ package edu.unicundi;
  * @author holman
  */
 public interface IFigura {
-    
+
+    //metodo para calcular area
+    public void area();
+
+    //metodo para calcular perimetro
+    public void perimetro();
+
+    //metodo para calcular lados con coordenadas
+    public void coordenadaALados();
+
 }
